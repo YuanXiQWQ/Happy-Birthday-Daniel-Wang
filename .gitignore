@@ -1,0 +1,42 @@
+# Node.js 依赖
+node_modules/
+
+# 日志文件
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+
+# 环境变量配置文件
+.env
+
+# 编辑器相关文件
+.idea/
+.vscode/
+*.swp
+
+# 构建输出目录
+dist/
+build/
+
+# 忽略所有临时文件
+tmp/
+temp/
+
+# 忽略包锁文件
+package-lock.json
+yarn.lock
+
+# 忽略覆盖率文件
+coverage/
+
+# 忽略数据库文件（如果有使用本地数据库）
+*.db
+*.sqlite
+
+# 忽略公共文件夹中的临时文件（例如上传文件）
+public/uploads/
