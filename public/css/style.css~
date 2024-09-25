@@ -76,25 +76,26 @@ p{
   }
 }
 
-/* 彩条效果 */
-#confetti {
-  position: fixed; /* 固定在屏幕上 */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  pointer-events: none; /* 防止阻碍用户交互 */
-  overflow: hidden; /* 隐藏超出部分 */
-  background-image: url('/images/confetti.png'); /* 确保彩条图片路径正确 */
-  background-repeat: repeat; /* 重复平铺背景 */
-  background-size: contain; /* 适应容器大小 */
-  z-index: 1; /* 让彩条在蛋糕图片之上 */
-  opacity: 0;
-  transition: opacity 0.5s ease; /* 透明度渐变效果 */
+/* 扔到桌子上的效果 */
+.throw{
+  animation: throw-animation 0.8s ease-out; /* 使用自定义动画 */
 }
 
-.show-confetti{
-  opacity: 1; /* 显示彩条 */
+@keyframes throw-animation{
+  0%{
+    transform: translateY(-200px) scale(0.5); /* 从高处掉下来，缩小状态 */
+    opacity: 0.5;
+  }
+  60%{
+    transform: translateY(30px) scale(1.1); /* 下落到桌面前，轻微放大 */
+    opacity: 1;
+  }
+  80%{
+    transform: translateY(-15px) scale(1); /* 反弹回升 */
+  }
+  100%{
+    transform: translateY(0) scale(1); /* 最终稳定在桌面 */
+  }
 }
 
 /* 按钮样式 */
