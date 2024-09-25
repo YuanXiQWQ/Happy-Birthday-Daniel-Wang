@@ -12,19 +12,19 @@ body{
 /* 标题样式 */
 h1{
   color: #FF69B4;
-  margin-bottom: 10px; /* 减少标题与下面段落之间的间距 */
+  margin-bottom: 10px;
 }
 
 /* 段落样式 */
 p{
-  margin: 10px 0; /* 减少段落的外边距 */
+  margin: 10px 0;
 }
 
 /* 计数器样式 */
 #counterTitle{
-  font-size: 24px; /* 计数器标题大小 */
-  color: #FF4500; /* 使用橙色作为计数器的颜色 */
-  margin: 10px 0; /* 设置计数器与周围元素的间距 */
+  font-size: 24px;
+  color: #FF4500;
+  margin: 10px 0;
 }
 
 /* 居中容器 */
@@ -33,32 +33,32 @@ p{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* 全屏居中 */
-  padding: 0; /* 确保没有内边距 */
-  margin: 0; /* 确保没有外边距 */
+  height: 100vh;
+  padding: 0;
+  margin: 0;
 }
 
 /* 图片样式 */
 #cakeImage{
-  max-width: 300px; /* 控制蛋糕图片的最大宽度 */
-  transition: transform 0.3s ease, filter 0.3s ease; /* 图片放大和阴影的动画过渡 */
-  filter: drop-shadow(0 0 0 transparent); /* 初始无阴影 */
-  margin-bottom: 20px; /* 图片与按钮之间的距离 */
+  max-width: 300px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 0 0 transparent);
+  margin-bottom: 20px;
 }
 
 #cakeImage:hover{
-  transform: scale(1.1); /* 鼠标悬浮时放大1.1倍 */
-  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5)); /* 悬浮时的阴影效果 */
+  transform: scale(1.1);
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
 }
 
 /* 隐藏图片时仍保留空间 */
 .hidden{
-  visibility: hidden; /* 隐藏但保留空间 */
+  visibility: hidden;
 }
 
 /* 果冻效果 */
 .jelly{
-  animation: jelly-animation 0.6s ease-in-out; /* 使用自定义动画 */
+  animation: jelly-animation 0.6s ease-in-out;
 }
 
 @keyframes jelly-animation{
@@ -78,21 +78,21 @@ p{
 
 /* 拍到桌子上的效果 */
 .slam{
-  animation: slam-animation 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* 使用自定义动画 */
+  animation: slam-animation 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
 @keyframes slam-animation{
   0%{
-    transform: translateY(-20px) scale(1.1); /* 轻微向上移动并放大 */
+    transform: translateY(-20px) scale(1.1);
   }
   60%{
-    transform: translateY(0) scale(1); /* 返回到桌面位置 */
+    transform: translateY(0) scale(1);
   }
   80%{
-    transform: translateY(-5px) scale(1.05); /* 轻微反弹 */
+    transform: translateY(-5px) scale(1.05);
   }
   100%{
-    transform: translateY(0) scale(1); /* 稳定在桌面 */
+    transform: translateY(0) scale(1);
   }
 }
 
@@ -100,21 +100,21 @@ p{
 #resetButton{
   margin-top: 20px;
   padding: 15px 30px;
-  background-color: #FF69B4; /* 主题色，粉色 */
-  color: white; /* 按钮文字白色 */
-  font-weight: bold; /* 加粗字体 */
-  font-size: 18px; /* 字体大小 */
+  background-color: #FF69B4;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
   border: none;
-  border-radius: 5px; /* 圆角按钮 */
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease; /* 背景色和按下动画过渡 */
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 #resetButton:hover{
-  background-color: #FF1493; /* 鼠标悬浮时变成深粉色 */
-  transform: scale(1.05); /* 悬浮时稍微放大 */
+  background-color: #FF1493;
+  transform: scale(1.05);
 }
 
 #resetButton:active{
-  transform: scale(0.98); /* 按下时缩小一点，制造按压效果 */
+  transform: scale(0.98);
 }

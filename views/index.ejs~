@@ -1,12 +1,10 @@
 <!-- views/index.ejs -->
 <div class="container">
-    <h1>Happy Birthday, <%= name %>!</h1> <!-- 确保这个标题在container中 -->
+    <h1>Happy Birthday, <%= name %>!</h1>
     <p>Wishing you a day filled with love, joy, and lots of cake!</p>
-    <!-- 添加计数器标题和计数显示 -->
     <h2 id="counterTitle">Cakes Eaten: <span id="cakeCounter">0</span></h2>
-    <div class="cake-container"> <!-- 包裹蛋糕图片的容器 -->
+    <div class="cake-container">
         <img id="cakeImage" src="/images/0.webp" alt="Birthday Cake" onclick="cutCake()">
-        <div id="confetti" class="hidden"></div> <!-- 彩条元素，初始隐藏 -->
     </div>
     <button id="resetButton" onclick="resetCake()">One More Cake</button>
 </div>
