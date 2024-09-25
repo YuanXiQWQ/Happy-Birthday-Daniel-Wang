@@ -20,6 +20,13 @@ p{
   margin: 10px 0; /* 减少段落的外边距 */
 }
 
+/* 计数器样式 */
+#counterTitle{
+  font-size: 24px; /* 计数器标题大小 */
+  color: #FF4500; /* 使用橙色作为计数器的颜色 */
+  margin: 10px 0; /* 设置计数器与周围元素的间距 */
+}
+
 /* 居中容器 */
 .container{
   display: flex;
