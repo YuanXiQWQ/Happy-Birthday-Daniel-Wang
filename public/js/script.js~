@@ -17,7 +17,6 @@ function cutCake() {
 function resetCake() {
   const cakeImage = document.getElementById('cakeImage');
   const cakeCounter = document.getElementById('cakeCounter');
-  const confetti = document.getElementById('confetti');
 
   currentCakeIndex = 0;
   cakeImage.src = `/images/${currentCakeIndex}.webp`;
@@ -27,10 +26,11 @@ function resetCake() {
   cakesEaten++;
   cakeCounter.textContent = cakesEaten;
 
-  // 如果计数器是10的整数倍，添加果冻效果并释放彩条
+  // 如果计数器是10的整数倍，添加果冻效果
   if (cakesEaten % 10 === 0) {
     addJellyEffect(cakeImage); // 添加果冻效果
-    releaseConfetti(confetti); // 释放彩条
+  } else {
+    addSlamEffect(cakeImage); // 添加拍到桌子上的效果
   }
 }
 
@@ -42,12 +42,10 @@ function addJellyEffect(element) {
   }, 1000);
 }
 
-// 释放彩条效果
-function releaseConfetti(element) {
-  element.classList.remove('hidden'); // 显示彩条元素
-  element.classList.add('show-confetti'); // 添加彩条动画
+// 添加拍到桌子上的效果
+function addSlamEffect(element) {
+  element.classList.add('slam'); // 添加拍到桌子上的效果类
   setTimeout(() => {
-    element.classList.remove('show-confetti'); // 3秒后隐藏彩条动画
-    element.classList.add('hidden'); // 再次隐藏彩条元素
-  }, 3000);
+    element.classList.remove('slam'); // 0.5秒后移除拍到桌子上的效果类
+  }, 500);
 }

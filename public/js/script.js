@@ -26,9 +26,11 @@ function resetCake() {
   cakesEaten++;
   cakeCounter.textContent = cakesEaten;
 
-  // 如果计数器是10的整数倍，添加果冻效果
-  if (cakesEaten % 10 === 0) {
+  // 如果计数器是5的整数倍，添加果冻效果
+  if (cakesEaten % 5 === 0) { // 修改判断条件
     addJellyEffect(cakeImage); // 添加果冻效果
+  } else {
+    addSlamEffect(cakeImage); // 添加拍到桌子上的效果
   }
 }
 
@@ -38,4 +40,12 @@ function addJellyEffect(element) {
   setTimeout(() => {
     element.classList.remove('jelly'); // 1秒后移除果冻效果类
   }, 1000);
+}
+
+// 添加拍到桌子上的效果
+function addSlamEffect(element) {
+  element.classList.add('slam'); // 添加拍到桌子上的效果类
+  setTimeout(() => {
+    element.classList.remove('slam'); // 0.5秒后移除拍到桌子上的效果类
+  }, 500);
 }

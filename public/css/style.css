@@ -76,6 +76,26 @@ p{
   }
 }
 
+/* 拍到桌子上的效果 */
+.slam{
+  animation: slam-animation 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* 使用自定义动画 */
+}
+
+@keyframes slam-animation{
+  0%{
+    transform: translateY(-20px) scale(1.1); /* 轻微向上移动并放大 */
+  }
+  60%{
+    transform: translateY(0) scale(1); /* 返回到桌面位置 */
+  }
+  80%{
+    transform: translateY(-5px) scale(1.05); /* 轻微反弹 */
+  }
+  100%{
+    transform: translateY(0) scale(1); /* 稳定在桌面 */
+  }
+}
+
 /* 按钮样式 */
 #resetButton{
   margin-top: 20px;
