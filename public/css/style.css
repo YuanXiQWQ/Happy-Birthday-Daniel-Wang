@@ -56,6 +56,26 @@ p{
   visibility: hidden; /* 隐藏但保留空间 */
 }
 
+/* 果冻效果 */
+.jelly{
+  animation: jelly-animation 0.6s ease-in-out; /* 使用自定义动画 */
+}
+
+@keyframes jelly-animation{
+  0%, 100%{
+    transform: scale(1);
+  }
+  25%{
+    transform: scale(1.2, 0.8);
+  }
+  50%{
+    transform: scale(0.8, 1.2);
+  }
+  75%{
+    transform: scale(1.1, 0.9);
+  }
+}
+
 /* 按钮样式 */
 #resetButton{
   margin-top: 20px;
