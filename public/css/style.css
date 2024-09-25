@@ -118,3 +118,29 @@ p{
 #resetButton:active{
   transform: scale(0.98);
 }
+
+/* GitHub图标样式 */
+.github-icon{
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.github-icon:hover{
+  transform: scale(1.2);
+}
+
+/* 底部内容样式 */
+.footer-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+footer p{
+  margin: 0;
+  display: inline;
+}

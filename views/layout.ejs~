@@ -6,14 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
     <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/script.js"></script> <!-- 引入JavaScript文件 -->
+    <script src="/js/script.js"></script>
 </head>
 <body>
     <main>
         <%- body %>
     </main>
     <footer>
-        <p>© <%= new Date().getFullYear() %> Birthday Wishes for <%= name %></p>
+        <div class="footer-content">
+        <a href="https://github.com/YuanXiQWQ/Happy-Birthday-Daniel-Wang.git" target="_blank">
+            <img src="/images/github-mark.svg" alt="GitHub Repository" class="github-icon">
+        </a>
+        <p>© 2024 Birthday Wishes for Daniel Wang</p>
     </footer>
 </body>
 </html>
