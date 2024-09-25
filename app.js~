@@ -1,28 +1,17 @@
-// app.js
 const express = require('express');
 const app = express();
+const expressLayouts = require('express-ejs-layouts');
 const port = 3000;
 
-// 设置视图引擎为EJS
 app.set('view engine', 'ejs');
-
-// 设置静态文件夹
 app.use(express.static('public'));
+app.use(expressLayouts);
+app.set('layout', 'layout');
 
-// 自定义渲染方法，将layout和具体页面结合
-app.use((req, res, next) => {
-  res.renderWithLayout = (view, options = {}) => {
-    res.render(view, {...options, layout: 'layout'});
-  };
-  next();
-});
-
-// 根路由，渲染主页
 app.get('/', (req, res) => {
-  res.renderWithLayout('index', {title: 'Happy Birthday', name: 'Daniel Wang'});
+  res.render('index',{ title: 'Happy Birthday' });
 });
 
-// 启动服务器
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });

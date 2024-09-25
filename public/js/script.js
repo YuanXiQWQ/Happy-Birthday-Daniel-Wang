@@ -1,7 +1,7 @@
 // public/js/script.js
 
 let currentCakeIndex = 0;
-let cakesEaten = 0; // 记录吃掉的蛋糕数量
+let cakesEaten = 0;
 
 function cutCake() {
   const cakeImage = document.getElementById('cakeImage');
@@ -10,42 +10,61 @@ function cutCake() {
     currentCakeIndex++;
     cakeImage.src = `/images/${currentCakeIndex}.webp`;
   } else {
-    cakeImage.classList.add('hidden'); // 隐藏但保留空间
+    // 隐藏但保留空间
+    cakeImage.classList.add('hidden');
   }
 }
 
+/**
+ * 重置蛋糕
+ */
 function resetCake() {
   const cakeImage = document.getElementById('cakeImage');
   const cakeCounter = document.getElementById('cakeCounter');
 
   currentCakeIndex = 0;
   cakeImage.src = `/images/${currentCakeIndex}.webp`;
-  cakeImage.classList.remove('hidden'); // 显示图片
+  // 显示图片
+  cakeImage.classList.remove('hidden');
 
-  // 每次重置蛋糕时，计数器加1
+  // 计数器++
   cakesEaten++;
   cakeCounter.textContent = cakesEaten;
 
-  // 如果计数器是5的整数倍，添加果冻效果
-  if (cakesEaten % 5 === 0) { // 修改判断条件
-    addJellyEffect(cakeImage); // 添加果冻效果
+  // 如果计数器是5的整数倍，更换效果
+  if (cakesEaten % 5 === 0) {
+    // 添加果冻效果
+    addJellyEffect(cakeImage);
   } else {
-    addSlamEffect(cakeImage); // 添加拍到桌子上的效果
+    // 添加拍到桌子上的效果
+    addSlamEffect(cakeImage);
   }
 }
 
-// 添加果冻效果
+/**
+ * 添加果冻效果
+ *
+ * @param element 要添加果冻效果的元素
+ */
 function addJellyEffect(element) {
-  element.classList.add('jelly'); // 添加果冻效果的类
+  // 添加果冻效果的类
+  element.classList.add('jelly');
   setTimeout(() => {
-    element.classList.remove('jelly'); // 1秒后移除果冻效果类
+    // 1秒后移除果冻效果类
+    element.classList.remove('jelly');
   }, 1000);
 }
 
-// 添加拍到桌子上的效果
+/**
+ * 添加拍到桌子上的效果
+ *
+ * @param element 要添加拍到桌子上的效果的元素
+ */
 function addSlamEffect(element) {
-  element.classList.add('slam'); // 添加拍到桌子上的效果类
+  // 添加拍到桌子上的效果类
+  element.classList.add('slam');
   setTimeout(() => {
-    element.classList.remove('slam'); // 0.5秒后移除拍到桌子上的效果类
+    // 0.5秒后移除拍到桌子上的效果类
+    element.classList.remove('slam');
   }, 500);
 }
