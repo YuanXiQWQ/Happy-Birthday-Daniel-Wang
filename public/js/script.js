@@ -25,4 +25,17 @@ function resetCake() {
   // 每次重置蛋糕时，计数器加1
   cakesEaten++;
   cakeCounter.textContent = cakesEaten;
+
+  // 如果计数器是10的整数倍，添加果冻效果
+  if (cakesEaten % 10 === 0) {
+    addJellyEffect(cakeImage); // 添加果冻效果
+  }
+}
+
+// 添加果冻效果
+function addJellyEffect(element) {
+  element.classList.add('jelly'); // 添加果冻效果的类
+  setTimeout(() => {
+    element.classList.remove('jelly'); // 1秒后移除果冻效果类
+  }, 1000);
 }
