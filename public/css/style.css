@@ -1,4 +1,6 @@
 /* public/css/style.css */
+
+/* 通用样式 */
 body{
   font-family: Arial, sans-serif;
   text-align: center;
@@ -7,6 +9,65 @@ body{
   padding: 0;
 }
 
+/* 标题样式 */
 h1{
   color: #FF69B4;
+  margin-bottom: 10px; /* 减少标题与下面段落之间的间距 */
+}
+
+/* 段落样式 */
+p{
+  margin: 10px 0; /* 减少段落的外边距 */
+}
+
+/* 居中容器 */
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* 全屏居中 */
+  padding: 0; /* 确保没有内边距 */
+  margin: 0; /* 确保没有外边距 */
+}
+
+/* 图片样式 */
+#cakeImage{
+  max-width: 300px; /* 控制蛋糕图片的最大宽度 */
+  transition: transform 0.3s ease, filter 0.3s ease; /* 图片放大和阴影的动画过渡 */
+  filter: drop-shadow(0 0 0 transparent); /* 初始无阴影 */
+  margin-bottom: 20px; /* 图片与按钮之间的距离 */
+}
+
+#cakeImage:hover{
+  transform: scale(1.1); /* 鼠标悬浮时放大1.1倍 */
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5)); /* 悬浮时的阴影效果 */
+}
+
+/* 隐藏图片时仍保留空间 */
+.hidden{
+  visibility: hidden; /* 隐藏但保留空间 */
+}
+
+/* 按钮样式 */
+#resetButton{
+  margin-top: 20px;
+  padding: 15px 30px;
+  background-color: #FF69B4; /* 主题色，粉色 */
+  color: white; /* 按钮文字白色 */
+  font-weight: bold; /* 加粗字体 */
+  font-size: 18px; /* 字体大小 */
+  border: none;
+  border-radius: 5px; /* 圆角按钮 */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* 背景色和按下动画过渡 */
+}
+
+#resetButton:hover{
+  background-color: #FF1493; /* 鼠标悬浮时变成深粉色 */
+  transform: scale(1.05); /* 悬浮时稍微放大 */
+}
+
+#resetButton:active{
+  transform: scale(0.98); /* 按下时缩小一点，制造按压效果 */
 }
