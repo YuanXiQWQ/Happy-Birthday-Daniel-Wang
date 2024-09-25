@@ -1,7 +1,7 @@
 /* public/css/style.css */
 
 /* 通用样式 */
-body{
+body {
   font-family: Arial, sans-serif;
   text-align: center;
   background-color: #F0F8FF;
@@ -9,8 +9,22 @@ body{
   padding: 0;
 }
 
-h1{
+/* 标题样式 */
+h1 {
   color: #FF69B4;
+  margin-bottom: 10px; /* 减少标题与下面段落之间的间距 */
+}
+
+/* 段落样式 */
+p {
+  margin: 10px 0; /* 减少段落的外边距 */
+}
+
+/* 计数器样式 */
+#counterTitle {
+  font-size: 24px; /* 计数器标题大小 */
+  color: #FF4500; /* 使用橙色作为计数器的颜色 */
+  margin: 10px 0; /* 设置计数器与周围元素的间距 */
 }
 
 /* 居中容器 */
@@ -25,24 +39,25 @@ h1{
 }
 
 /* 图片样式 */
-#cakeImage{
+#cakeImage {
   max-width: 300px; /* 控制蛋糕图片的最大宽度 */
   transition: transform 0.3s ease, filter 0.3s ease; /* 图片放大和阴影的动画过渡 */
   filter: drop-shadow(0 0 0 transparent); /* 初始无阴影 */
+  margin-bottom: 20px; /* 图片与按钮之间的距离 */
 }
 
-#cakeImage:hover{
+#cakeImage:hover {
   transform: scale(1.1); /* 鼠标悬浮时放大1.1倍 */
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5)); /* 悬浮时的阴影效果 */
 }
 
 /* 隐藏图片时仍保留空间 */
-.hidden{
+.hidden {
   visibility: hidden; /* 隐藏但保留空间 */
 }
 
 /* 按钮样式 */
-#resetButton{
+#resetButton {
   margin-top: 20px;
   padding: 15px 30px;
   background-color: #FF69B4; /* 主题色，粉色 */
@@ -55,11 +70,11 @@ h1{
   transition: background-color 0.3s ease, transform 0.2s ease; /* 背景色和按下动画过渡 */
 }
 
-#resetButton:hover{
+#resetButton:hover {
   background-color: #FF1493; /* 鼠标悬浮时变成深粉色 */
   transform: scale(1.05); /* 悬浮时稍微放大 */
 }
 
-#resetButton:active{
+#resetButton:active {
   transform: scale(0.98); /* 按下时缩小一点，制造按压效果 */
 }
