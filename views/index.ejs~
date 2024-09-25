@@ -1,0 +1,17 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, <%= name %>!</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/script.js"></script> <!-- 引入JavaScript文件 -->
+</head>
+<body>
+    <h1>Happy Birthday, <%= name %>!</h1>
+    <p>Wishing you a day filled with love, joy, and lots of cake!</p>
+    <img id="cakeImage" src="/images/0.webp" alt="Birthday Cake" onclick="cutCake()">
+    <button id="resetButton" onclick="resetCake()">Reset Cake</button>
+</body>
+</html>
